@@ -6,7 +6,7 @@ local s = assert(marshal.encode(a))
 --print(string.format("%q", s))
 local t = marshal.decode(s)
 --print(t)
-table.foreach(t, print)
+for k, v in ipairs(t) do print(k, v) end
 assert(t[1] == "a")
 assert(t[2] == "b")
 assert(t[3] == "c")
